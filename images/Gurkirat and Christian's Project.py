@@ -1,33 +1,33 @@
-import random   # Imports a random integer
-import sys   # Creates a system
+import random
+import sys
 
 
-def guess_game():   # defines the game
-    n = random.randint(1, 99) # n is equal to an integer between 1 and 99
-    start(n)   #starts game intiative
-def start(n): # defines the start of the game
+def guess_game():
+    n = random.randint(1, 99)
+    start(n)
+def start(n):
   
-    guess = raw_input("Enter an integer from 1 to 99: ")# guess equals the raw input
+    guess = raw_input("Enter an integer from 1 to 99: ")
     
-    if guess == "end":# if "end" is entered the game is over
-        sys.exit() #syetem end
+    if guess == "end":
+        sys.exit()
     
     
-    try:# the program tries this operation
-     guess = int(guess) # indicates the integer guess
-    except ValueError: # it eradicates the Error
-     print("That's not an int!") #states that the input is not an integer
-     guess = int(raw_input("Enter an integer from 1 to 99: ")) # sends program back to the start
-    while 0 == 0: # Always repeats
-        a = int(guess)  # a equals to the guess      
-        if a < n:  # if a is less than n
-            print "guess is low"    # indicates that guess is low
-            start(n) # Restarts program
-        elif a > n:#if a is greater than n
-            print "guess is high" # indicates that the guess is too high
-            start(n) # Restarts program
-        elif n == a: # if a equals n
-                    print "you guessed it!" # indicate that you won
-                    sys.exit()  #Ends program
+    try:
+     guess = int(guess)
+    except ValueError:
+     print("That's not an int!")
+     guess = int(raw_input("Enter an integer from 1 to 99: "))
+    while 0 == 0:
+        a = int(guess)        
+        if a < n:
+            print "guess is low"
+            start(n)
+        elif a > n:
+            print "guess is high"
+            start(n)
+        elif n == a:
+                    print "you guessed it!"
+                    sys.exit()
 
     
